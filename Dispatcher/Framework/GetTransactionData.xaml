@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetTransactionData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetTransactionData" this:GetTransactionData.in_TransactionNumber="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>751,1177</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>751,1354</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -38,7 +38,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -59,9 +59,12 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Get data from spreadsheets, databases, email, web API or UiPath server queues. If no new data, set out_TransactionItem to Nothing. &#xA;&#xA;For a linear process (not repetitive), set out_TransactionItem only for in_TransactionNumber 1 - first and only transaction. &#xA;&#xA;If the process is repeatable, set io_TransactionData once for in_TransactionNumber 1, then assign a new out_TransactionItem by using the in_TransactionNumber to index io_TransactionData. Be aware that, at the end of the io_TransactionData collection, it is your responsibility to set out_TransactionItem to Nothing, thus ending the process." DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="711,1097" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Get data from spreadsheets, databases, email, web API or UiPath server queues. If no new data, set out_TransactionItem to Nothing. &#xA;&#xA;For a linear process (not repetitive), set out_TransactionItem only for in_TransactionNumber 1 - first and only transaction. &#xA;&#xA;If the process is repeatable, set io_TransactionData once for in_TransactionNumber 1, then assign a new out_TransactionItem by using the in_TransactionNumber to index io_TransactionData. Be aware that, at the end of the io_TransactionData collection, it is your responsibility to set out_TransactionItem to Nothing, thus ending the process." DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="711,1274" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="NextPageExists" />
     </Sequence.Variables>
@@ -85,22 +88,28 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:UiElementExists DisplayName="Element Exists  Next Page" Exists="[NextPageExists]" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b7ad2d941aa88ff191c51f0278558e97" Selector="&lt;webctrl aaname='&amp;gt;' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="224332839c668767ff925fafbda23360" Selector="&lt;webctrl aaname='4' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <If Condition="[NextPageExists]" DisplayName="If a new Item is fetched Grab it's significant data for logging" sap:VirtualizedContainerService.HintSize="673,439" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[NextPageExists]" DisplayName="If a new Item is fetched Grab it's significant data for logging" sap:VirtualizedContainerService.HintSize="673,634" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="335,286" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="335,486" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Write data to the added fields that identify the Transaction" DisplayName="Write Transaction info in Logging Fields" sap:VirtualizedContainerService.HintSize="297,194" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Write data to the added fields that identify the Transaction" DisplayName="Write Transaction info in Logging Fields" sap:VirtualizedContainerService.HintSize="297,394" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -113,6 +122,22 @@
               </Assign.To>
               <Assign.Value>
                 <InArgument x:TypeArguments="x:String">[in_TransactionNumber.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="259,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[in_TransactionNumber]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[in_TransactionNumber+1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="259,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_TransactionID]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[now.ToString]</InArgument>
               </Assign.Value>
             </Assign>
           </Sequence>
