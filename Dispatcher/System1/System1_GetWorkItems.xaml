@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>646,1626</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>626,1055</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_GetWorkItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -56,7 +56,6 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -64,19 +63,19 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="System1_GetWorkItems" sap:VirtualizedContainerService.HintSize="586,966" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_GetWorkItems" sap:VirtualizedContainerService.HintSize="586,975" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe ACME'" sap:VirtualizedContainerService.HintSize="548,874" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5ed05d0595087731e69096b77ef205e6" Selector="&lt;html title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'iexplore.exe ACME'" sap:VirtualizedContainerService.HintSize="548,883" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="e126906c5b5af5260ef335346dca2570" Selector="&lt;html app='firefox.exe' title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,728" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,737" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="thisPageOpened" />
             </Sequence.Variables>
@@ -90,7 +89,7 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8de47f5971b2d98a132379dae501761e" Selector="[&quot;&lt;webctrl aaname='&quot;+in_TransactionItem+&quot;' tag='SPAN' class='page-numbers current' /&gt;&quot;]" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[not thisPageOpened]" sap:VirtualizedContainerService.HintSize="480,253" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not thisPageOpened]" sap:VirtualizedContainerService.HintSize="480,259" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://acme-test.ui...'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                   <ui:Click.CursorPosition>
@@ -104,7 +103,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="30aa905f6f063d7f9d0ffe0e8147d2c8" Selector="[&quot;&lt;html title='ACME System 1 - Work Items' /&gt;&lt;webctrl aaname='&quot;+in_TransactionItem.ToString+&quot;' tag='A' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1511d5b65552a1fc6dd487e3b431595b" Selector="[&quot;&lt;webctrl aaname='&quot;+in_TransactionItem.ToString+&quot;' tag='A' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
                   </ui:Click.Target>
                 </ui:Click>
               </If.Then>
@@ -114,7 +113,7 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f314a389d5abbaa9656adf067825fcf2" Selector="&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE" />
               </ui:ExtractData.Target>
             </ui:ExtractData>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="480,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="480,54" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,351" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
