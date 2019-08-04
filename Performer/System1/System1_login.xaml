@@ -72,7 +72,7 @@
         <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password">[system1Password]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="System1 login" Hidden="False" sap:VirtualizedContainerService.HintSize="430,825" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[system1Url]">
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="System1 login" Hidden="False" sap:VirtualizedContainerService.HintSize="430,825" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[system1Url]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

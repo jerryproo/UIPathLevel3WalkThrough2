@@ -1118,15 +1118,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wangzw.GOLDEN-TECH\\.nuget\\packages\\": {}
+    "C:\\Users\\29861\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "UiPath_REFrameWork",
       "projectName": "UiPath_REFrameWork",
-      "projectPath": "E:\\GitHub\\UiPathLevel3WalkThrough2\\Dispatcher\\.local",
-      "packagesPath": "C:\\Users\\wangzw.GOLDEN-TECH\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub\\UiPathLevel3WalkThrough2\\Dispatcher\\.local"
+      "projectPath": "D:\\WORK\\github\\UiPathLevel3WalkThrough2\\Dispatcher\\.local",
+      "packagesPath": "C:\\Users\\29861\\.nuget\\packages\\",
+      "outputPath": "D:\\WORK\\github\\UiPathLevel3WalkThrough2\\Dispatcher\\.local"
     },
     "frameworks": {
       "net461": {

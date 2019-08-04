@@ -1,5 +1,2 @@
 InvoiceNumber,Item,Date,Amount,Tax,Total,Currency
-226427,"Professional Services",2017-10-08,35563,7112.6,42675.6,RON
-679004,"Beverages and Catering",2017-10-07,28192,5638.4,33830.4,CAD
-179938,"Waste management services",2017-10-02,238908,47781.6,286690,USD
-820442,"Concierge Services",2017-10-26,417,83.4,500.4,EUR
+565589,"Various paper supplies",2017-10-15,168990,33798,202788,CAD
